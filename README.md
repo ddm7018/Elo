@@ -37,3 +37,6 @@ https://en.wikipedia.org/wiki/Elo_rating_system
 ```python
 eloLeague.expectResult(eloLeague.ratingDict['Daniel'],eloLeague.ratingDict['Mike'])
 ```
+
+#Future Changes
+will continue to clean and run simulations
