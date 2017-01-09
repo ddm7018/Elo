@@ -15,7 +15,7 @@ The long-term average for teams is 1500 and typically range from 1200 to 1800
 ##k-value
 
 ```python
-eloLeague = Elo(k= 20)
+eloLeague = Elo(k = 20)
 ```
 The k-factor determins how quickly the rating reacts to new games results. Set too high the ratings will jump around too muc,and conversely if set to low it will take a long time to recognize greatness
 
@@ -27,7 +27,7 @@ The g-value or margin of value multiplier is introduced to provent autocorrelati
 
 ##home-field advantage 
 ```python
-eloLeague = Elo(k= 20, homefield = 100)
+eloLeague = Elo(k = 20, homefield = 100)
 ```
 Home-field advantage is pre-determined. In the NBA, 538 gives home-court advantages to around 100 elo points. Two evently matched team, the home team would have 100 more elo point temporaily. 
 
