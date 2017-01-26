@@ -3,7 +3,7 @@ setup(
   name = 'elo-sports',
   packages = ['elo-sports'], # this must be the same as the name above
   version = '0.1',
-  description = 'A random test lib',
+  description = 'Elo Ranking System used for Sports',
   author = 'Daniel Mooney',
   author_email = 'dantheran7@gmail.com',
   url = 'https://github.com/ddm7018/Elo', # use the URL to the github repo

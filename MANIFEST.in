@@ -1,0 +1,2 @@
+include runner README
+recursive-include package/things *
