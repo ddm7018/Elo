@@ -1,7 +1,7 @@
 from distutils.core import setup
 setup(
   name = 'elo-sports',
-  packages = ['mypackage'], # this must be the same as the name above
+  packages = ['elo-sports'], # this must be the same as the name above
   version = '0.1',
   description = 'A random test lib',
   author = 'Daniel Mooney',
