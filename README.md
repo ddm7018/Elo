@@ -40,3 +40,4 @@ eloLeague.expectResult(eloLeague.ratingDict['Daniel'],eloLeague.ratingDict['Mike
 
 #Future Changes
 will continue to clean and run simulations
+Updated June 30
