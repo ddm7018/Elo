@@ -12,31 +12,32 @@ Teams always gain points after winning games and team always lose points after l
 
 The long-term average for teams is 1500 and typically range from 1200 to 1800
 
-##k-value
+## k-value
 
 ```python
 eloLeague = Elo(k = 20)
 ```
 The k-factor determins how quickly the rating reacts to new games results. Set too high the ratings will jump around too muc,and conversely if set to low it will take a long time to recognize greatness
 
-##g-value
+## g-value
 ```python
 eloLeague = Elo(k= 20, g = 1)
 ```
 The g-value or margin of value multiplier is introduced to provent autocorrelation
 
-##home-field advantage 
+## home-field advantage 
 ```python
 eloLeague = Elo(k = 20, homefield = 100)
 ```
 Home-field advantage is pre-determined. In the NBA, 538 gives home-court advantages to around 100 elo points. Two evently matched team, the home team would have 100 more elo point temporaily. 
 
-##expected score
+## expected score
 The formula for determing the expected score can be found 
 https://en.wikipedia.org/wiki/Elo_rating_system
 ```python
 eloLeague.expectResult(eloLeague.ratingDict['Daniel'],eloLeague.ratingDict['Mike'])
 ```
 
-#Future Changes
+### Future Changes
 will continue to clean and run simulations
+Updated June 30
