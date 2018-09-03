@@ -2,6 +2,7 @@
 Orginally developed as way to rank chess players, many leagues and statsicans have applied the ranking system to rank sport teams. 
 
 ```python
+from elosports.elo import Elo
 eloLeague = Elo(k = 20)
 eloLeague.addPlayer("Daniel", rating = 1600)
 eloLeague.addPlayer("Mike")
@@ -35,9 +36,12 @@ Home-field advantage is pre-determined. In the NBA, 538 gives home-court advanta
 The formula for determing the expected score can be found 
 https://en.wikipedia.org/wiki/Elo_rating_system
 ```python
-eloLeague.expectResult(eloLeague.ratingDict['Daniel'],eloLeague.ratingDict['Mike'])
+eloLeague.expectResult(eloLeague.ratingDict['Daniel'],eloLeague.ratingDict['Harry'])
 ```
+## update rankings
+```python
+eloLeague.gameOver(winner = "Daniel, loser = "Harry")
+```
+## Tutorial
+Tutorial with NFL (American football) simulated Elo Rankings can be found in the tutorial section
 
-### Future Changes
-will continue to clean and run simulations
-Updated June 30
