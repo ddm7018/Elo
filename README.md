@@ -9,7 +9,7 @@ eloLeague.addPlayer("Harry")
 eloLeague.expectResult(eloLeague.ratingDict['Daniel'],eloLeague.ratingDict['Harry'])
 ```
 
-The difference in ratings (relative score) determines the probability of victory in a potential match-up.  After a result concludes, the difference in ratings determines how many points gained by the victor and deducted from the loser.  A few points transfer from the loser to the winner when the higher rated player wins. Many points transfer when the lower-rated player wins.
+The difference in ratings (relative score) determines the probability of victory in a potential match-up.  After a result concludes, the difference determines how many points the victor gains and defeated loses.  A few points transfer from the loser to the winner when the higher rated player wins. Many points transfer when the lower-rated player wins.
 
 The long-term average for teams is 1500 and values generally range from 1200 to 1800.
 
