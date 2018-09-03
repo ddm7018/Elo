@@ -1,47 +1,46 @@
 # Elo Python Ranking
-Orginally developed as way to rank chess players, many leagues and statsicans have applied the ranking system to rank sport teams. 
+The elo formula is a method of ranking chess players by calculating relative skill. It has found successful applications in team sports. A python package has been developed to calulate expected probability of victory based on prior skill rankings and update the rankings following a result. 
 
 ```python
 from elosports.elo import Elo
 eloLeague = Elo(k = 20)
 eloLeague.addPlayer("Daniel", rating = 1600)
-eloLeague.addPlayer("Mike")
-eloLeague.expectResult(eloLeague.ratingDict['Daniel'],eloLeague.ratingDict['Mike'])
+eloLeague.addPlayer("Harry")
+eloLeague.expectResult(eloLeague.ratingDict['Daniel'],eloLeague.ratingDict['Harry'])
 ```
 
-Teams always gain points after winning games and team always lose points after losing. The point differential between the two teams after the game is zero sum. If heavy favorite loses and drops 30 points, the underdog gains 30.
+The difference in ratings (relative score) determines the probability of victory in a potential match-up.  After a result concludes, the difference in ratings determines how many points gained by the victor and deducted from the loser.  A few points transfer from the loser to the winner when the higher rated player wins. Many points transfer when the lower-rated player wins.
 
-The long-term average for teams is 1500 and typically range from 1200 to 1800
+The long-term average for teams is 1500 and values generally range from 1200 to 1800.
 
 ## k-value
 
 ```python
 eloLeague = Elo(k = 20)
 ```
-The k-factor determins how quickly the rating reacts to new games results. Set too high the ratings will jump around too muc,and conversely if set to low it will take a long time to recognize greatness
+The k-factor determines how the rating reacts to new results. If the value is set too high the ratings will jump around too much and set too low it will take a long time to recognize greatness.
 
 ## g-value
 ```python
 eloLeague = Elo(k= 20, g = 1)
 ```
-The g-value or margin of value multiplier is introduced to provent autocorrelation
+The g-value or margin of value multiplier introduces a way of preventing autocorrelation.
 
-## home-field advantage 
+## Home-field Advantage 
 ```python
 eloLeague = Elo(k = 20, homefield = 100)
 ```
-Home-field advantage is pre-determined. In the NBA, 538 gives home-court advantages to around 100 elo points. Two evently matched team, the home team would have 100 more elo point temporaily. 
+Home-field advantage is pre-determined. In the NBA and NFL, FiveThirtyEight gives home-court advantages of around 100 Elo points. In the case of two evenly-matched teams, Elo favors the home team.
 
-## expected score
-The formula for determing the expected score can be found 
+## Expected Score
+The formula for determining the expected probabilistic score can found: 
 https://en.wikipedia.org/wiki/Elo_rating_system
 ```python
 eloLeague.expectResult(eloLeague.ratingDict['Daniel'],eloLeague.ratingDict['Harry'])
 ```
-## update rankings
+## Update Rankings
 ```python
 eloLeague.gameOver(winner = "Daniel, loser = "Harry")
 ```
 ## Tutorial
-Tutorial with NFL (American football) simulated Elo Rankings can be found in the tutorial section
-
+A tutorial with NFL (American football) simulated Elo rankings can be found in the tutorial section.
